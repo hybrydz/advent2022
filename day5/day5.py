@@ -12,7 +12,7 @@ def rearrangement(procedure: str,stacks: dict):
     toStack = int(procedure.split(' ')[5])
     if popCount>1:
         while popCount != 0:
-            stacks[toStack].insert(0,stacks[fromStack].pop(0))
+            stacks[toStack].insert(0,stacks[fromStack].pop(popCount-1))
             popCount-=1
     else:
         stacks[toStack].insert(0,stacks[fromStack].pop(0))
